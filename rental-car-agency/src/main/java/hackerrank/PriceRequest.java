@@ -15,9 +15,9 @@ public class PriceRequest {
   private Date end;
   private String tier;
   private boolean optionalInsurance;
-  List driversLicenseNumbers;
-  List driversBirthDates;
-  List names;
-  TimeZone timeZone;
+  public List driversLicenseNumbers;
+  public List driversBirthDates;
+  public List names;
+  private TimeZone timeZone;
 
 }

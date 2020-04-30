@@ -25,16 +25,18 @@ public class PricingServiceTest {
   @Test
   public void _01_one_week_rental() {
     PriceRequest priceRequest = new PriceRequest("111", new Date(2020, 10, 1, 6, 0), 7, new Date(2020, 10, 8, 6, 0), "economy", false, Arrays.asList("DL123", "DL234"),
-        Arrays.asList(new Date(1989, 06, 13), new Date(1991, 12, 4)), null, TimeZone.getTimeZone("America/los_angeles"));
+        Arrays.asList(new Date(1989, 06, 13), new Date(1991, 12, 4)), Arrays.asList("Aida Lovelace", "Charles Babbage"), TimeZone.getTimeZone("America/New_York"));
     assertEquals(251.93, pricingService.calculation(priceRequest));
   }
 
   @Test
   public void _02_TODO() {
+    // TODO: add a real unit test here
     assertTrue(false);
   }
   @Test
   public void _03_TODO() {
+    // TODO: add a real unit test here
     assertTrue(false);
   }
 

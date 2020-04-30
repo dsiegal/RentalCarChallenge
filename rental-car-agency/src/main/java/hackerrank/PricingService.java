@@ -70,8 +70,9 @@ public class PricingService {
       System.out.println("req failed");
       return 0;
     }
-    log.info("Customer " + req.getCustomerId() + " requesting " + req.getTier() + " car for pickup on " + req.getStart() + req.getTimeZone() +
-        " and return by " + req.getEnd() + req.getTimeZone() + (req.isOptionalInsurance() ? "without" : "with" ) + " optional insurance" + "for $" + price);
+    log.info("Customer " + req.getCustomerId() + " requesting " + req.getTier() + " car for pickup on " + req.getStart()  +
+        " and return by " + req.getEnd() +  (req.isOptionalInsurance() ? "without" : "with" ) + " optional insurance for driver(s) "
+        + req.getNames() + " for $" + price);
     return price;
   }
 }
