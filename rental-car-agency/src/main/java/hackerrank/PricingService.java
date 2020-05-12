@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 public class PricingService {
 
   private final EligibilityService eligibilityService;
-  private Logger log = Logger.getLogger("EligibilityService");
+  private Logger log = Logger.getLogger("EligibilityService.class");
 
   PricingService(EligibilityService eligibilityService) {
     this.eligibilityService = eligibilityService;

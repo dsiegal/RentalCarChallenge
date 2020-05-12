@@ -2,8 +2,6 @@
 version: 1.0
 configuration:
   has_webserver: false
-  readonly_paths:
-    - rental-car-agency/src/test/*
   scoring:
     command: "cd rental-car-agency; mvn clean test -Dtest=PricingServiceTest; cd target/surefire-reports; cat *.xml >> unit.xml"
     files:
@@ -12,6 +10,6 @@ configuration:
     default_open_files:
       - rental-car-agency/src/main/java/hackerrank/PricingService.java
     project_menu:
-      run: cd rental-car-agency; mvn clean install
-      install: cd rental-car-agency; mvn clean
+      run: cd rental-car-agency; mvn clean test -Dtest=PricingServiceTest
+      install: cd rental-car-agency; mvn clean install
       test: cd rental-car-agency; mvn clean test -Dtest=PricingServiceTest

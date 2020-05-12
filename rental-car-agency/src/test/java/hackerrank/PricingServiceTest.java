@@ -16,10 +16,11 @@ import static junit.framework.TestCase.assertTrue;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class PricingServiceTest {
   private static PricingService pricingService;
+  private static EligibilityService mockEligibiltyService;
 
   @BeforeClass
   public static void instantiate() {
-    pricingService = new PricingService(new EligibilityService());
+    pricingService = new PricingService(mockEligibiltyService);
   }
 
   @Test
