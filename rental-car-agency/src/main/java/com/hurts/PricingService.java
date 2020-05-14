@@ -1,4 +1,4 @@
-package hackerrank;
+package com.hurts;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

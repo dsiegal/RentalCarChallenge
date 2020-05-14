@@ -1,4 +1,4 @@
-package hackerrank;
+package com.hurts;
 
 
 public class EligibilityServiceException extends Exception {
