@@ -62,8 +62,9 @@ public class PricingService {
           if ( age < 25 || age > 75 ) {
             surcharge = 1.5;
           }
-          price *= surcharge;
         }
+        price *= surcharge;
+
       }
 
     } catch (Exception e) {
