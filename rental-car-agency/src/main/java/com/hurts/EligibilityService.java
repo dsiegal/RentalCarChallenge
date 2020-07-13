@@ -17,8 +17,7 @@ public class EligibilityService {
         canRent = true;
       }
     } else {
-      // Implement once we get contract with 3rd party background check service.
-      canRent = true;
+      // TODO: Implement once we get contract with 3rd party background check service.
     }
     return canRent;
   }

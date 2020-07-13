@@ -7,8 +7,8 @@ import java.util.TimeZone;
 public class PriceRequest {
   private String customerId;
   private Date start;
-  private int length;
   private Date end;
+  private int length;
   private String tier;
   private boolean optionalInsurance;
   public List driversLicenseNumbers;
@@ -16,11 +16,13 @@ public class PriceRequest {
   public List names;
   private TimeZone timeZone;
 
-  public PriceRequest(String customerId, Date start, int length, Date end, String tier, boolean optionalInsurance, List driversLicenseNumbers, List driversBirthDates, List names, TimeZone timeZone) {
+  public PriceRequest(String customerId, Date start, Date end, int length, String tier, boolean optionalInsurance,
+                      List driversLicenseNumbers, List driversBirthDates, List names, TimeZone timeZone)
+  {
     this.customerId = customerId;
     this.start = start;
-    this.length = length;
     this.end = end;
+    this.length = length;
     this.tier = tier;
     this.optionalInsurance = optionalInsurance;
     this.driversLicenseNumbers = driversLicenseNumbers;
