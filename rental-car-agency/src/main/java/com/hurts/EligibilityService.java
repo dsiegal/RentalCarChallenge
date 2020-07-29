@@ -8,16 +8,20 @@ public class EligibilityService {
   Logger logger = Logger.getLogger("EligibilityService");
 
   public boolean checkDoNotRentStatus(String ln) throws EligibilityServiceException {
-    boolean canRent = false;
+    boolean canRent = true;
     if (isTest) {
       if (ln.endsWith("9")) { // just a made up condition for testing purposes
-        logger.severe("License is suspended. Do not rent");
-        throw new EligibilityServiceException("License is suspended. Do not rent");
-      } else {
-        canRent = true;
+        logger.severe("License has expired. Will not rent.");
+        throw new EligibilityServiceException("License has expired.");
       }
     } else {
-      // TODO: Implement once we get contract with 3rd party background check service.
+      // Note: this block is commented out to keep the exercise simple & build time quick. You can assume it's working code:
+
+      // String url = "https://api.hurts.com/license-service/validate/" + ln;
+      // Response response = HttpRestClient.get(url);
+      // if (response.getOutcome() == Outcome.DENIED)) {
+      //   throw new EligibilityServiceException(response.message());
+      // }
     }
     return canRent;
   }
